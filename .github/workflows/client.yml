@@ -5,7 +5,7 @@ on:
     branches:
       reference
       #어떤 job을 할거냐
-  jobs:
+jobs:
   #빌드 할 때 밑에 작업
     build:
     #작업을 실행할 깃헙의 호스팅 러너
@@ -35,5 +35,4 @@ on:
               --region ap-northeast-2 \
               build s3://fe-76-doubl-e-s3 \
               --delete
-              
           working-directory: ./my-agora-states-client
