@@ -28,11 +28,11 @@ on:
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             AWS_EC2_METADATA_DISABLED: true
-          run: |
-            aws s3 sync \# build 할 버킷을 입력
+            # build 할 버킷을 입력
             # 작업할 스토리지
+          run: |
+            aws s3 sync \
               --region ap-northeast-2 \
-              
               build s3://fe-76-doubl-e-s3 \
               --delete
               
