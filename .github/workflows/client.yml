@@ -29,10 +29,11 @@ on:
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             AWS_EC2_METADATA_DISABLED: true
           run: |
-            aws s3 sync \
+            aws s3 sync \# build 할 버킷을 입력
+            # 작업할 스토리지
               --region ap-northeast-2 \
-              # build 할 버킷을 입력
+              
               build s3://fe-76-doubl-e-s3 \
               --delete
-              # 작업할 스토리지
+              
           working-directory: ./my-agora-states-client
